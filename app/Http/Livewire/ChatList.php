@@ -10,11 +10,11 @@ class ChatList extends Component
 
     protected $listeners = ["actualizarLista"];
     public function mount(){
-        $this->messages = \App\Models\Chat::orderBy("created_at", "desc")->take(15)->get();
+        $this->messages = \App\Models\Chat::orderBy("created_at", "desc")->take(30)->get();
     }
 
     public function actualizarLista(){
-        $this->messages = \App\Models\Chat::orderBy("created_at", "desc")->take(15)->get();
+        $this->messages = \App\Models\Chat::orderBy("created_at", "desc")->take(30)->get();
 
     }
 

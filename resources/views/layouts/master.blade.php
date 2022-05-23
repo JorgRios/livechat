@@ -13,7 +13,6 @@
     @toastr_css
 </head>
 <body>
-
     <div class="container">
         <a class="dropdown-item" href="/logout">Salir</a>
         @yield('content')

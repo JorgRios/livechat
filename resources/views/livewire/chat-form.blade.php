@@ -14,8 +14,8 @@
             <small class="text-danger">{{$message}}</small>
         @enderror
     </div>
-    <div style="position:absolute;" class="alert alert-success collapse mt-3" role="alert" id="avisoSuccess">
-        Se ha eviado
+    <div style="position: absolute; top:10px; right:10px;" class="alert alert-success collapse mt-3" role="alert" id="avisoSuccess">
+        Mensaje enviado
     </div>
     <script>
         window.livewire.on('mensajeEnviado',function(){
