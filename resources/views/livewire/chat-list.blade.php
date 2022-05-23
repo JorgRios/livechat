@@ -10,7 +10,7 @@
                 @foreach ($messages as $mensaje)
                 <div>
                     <div class="alert alert-{{($mensaje->user_id== auth()->user()->id)?'success':'warning'}}" style="margin-{{($mensaje->user_id== auth()->user()->id)?'left':'right'}}: 80px;">
-                        <strong>{{$mensaje->user->name}}</strong> <small class="float-right">[{{$mensaje->created_at->diffforhumans()}}]</small>
+                        <strong style="color: #{{$mensaje->user->color}}">{{$mensaje->user->name}}</strong> <small class="float-right">[{{$mensaje->created_at->diffforhumans()}}]</small>
                         <br><span class="text-muted">{{$mensaje->message}}</span>
                     </div>
                 </div>
