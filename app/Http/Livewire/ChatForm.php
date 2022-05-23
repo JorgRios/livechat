@@ -30,14 +30,12 @@ class ChatForm extends Component
         $this->validate([
             "message" => "required"
         ]);
-
         $chat = new Chat;
         $chat->user_id = $this->user_id;
         $chat->message = $this->message;
         $chat->save();
-        $this->emit('mensajeEnviado');
-        $this->emit('actualizarLista');
         event(new \App\Events\SendMessage($this->user_id,$this->message));
+        $this->emit('mensajeEnviado');
         $this->message="";
     }
 }
